@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helldiver Operation Report</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="tally_builder.js"></script>
+</head>
+
+<body>
+    <h1>Helldiver Operation Report</h1>
+    <form id="operationReportForm" onsubmit="return submitForm(event)">
+        <label for="operation_name">Operation Name:</label>
+        <input type="text" id="operation_name" name="operation_name">
+
+        <label for="start_time">Start Time:</label>
+        <input type="datetime-local" id="start_time" name="start_time">
+
+        <label for="end_time">End Time:</label>
+        <input type="datetime-local" id="end_time" name="end_time">  
+
+
+        <h2>Mission Summaries</h2>
+        <label for="mission1_summary">Mission 1 Summary:</label>
+        <textarea id="mission1_summary" name="mission1_summary"></textarea>
+
+        <label for="mission2_summary">Mission 2 Summary:</label>
+        <textarea id="mission2_summary" name="mission2_summary"></textarea>
+
+        <label for="mission3_summary">Mission 3 Summary:</label>
+        <textarea id="mission3_summary" name="mission3_summary"></textarea>
+
+        <label for="final_notes">Final Notes:</label>
+        <textarea id="final_notes" name="final_notes"></textarea>
+
+        <label for="success">Operation Success:</label>
+        <select id="success" name="success">
+            <option value="">Select an option</option>
+            <option value="success">Success</option>
+            <option value="failure">Failure</option>
+        </select>
+
+        <button type="submit">Submit Report</button>
+    </form>
+    <textarea id="markdownOutput" rows="10" cols="50"></textarea>
+</body>
+
+</html>
